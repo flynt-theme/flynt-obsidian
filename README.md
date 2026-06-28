@@ -16,9 +16,10 @@ Warm tones. Zero visual noise. - [Flynt](https://flynt-theme.github.io/flynt) fo
 
 ## Building from source
 
-The theme is generated from [`theme.css.tmpl`](theme.css.tmpl) using [strike](https://github.com/flynt-theme/flynt/tree/main/strike).
+The theme is generated from [`theme.css.tmpl`](theme.css.tmpl) using [strike](https://github.com/flynt-theme/strike).
 
 ```sh
+brew tap flynt-theme/tap && brew install strike
 strike build theme.css.tmpl --combined
 ```
 
