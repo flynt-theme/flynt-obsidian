@@ -1,7 +1,7 @@
 ---
 output: theme.css
 ---
-/* Flynt — Warm tones. Zero visual noise. */
+/* Flynt - Warm tones. Zero visual noise. */
 /* https://github.com/flynt-theme/flynt-obsidian */
 
 /* ══════════════════════════════════════════════════════════ Dark */
@@ -18,8 +18,8 @@ body.theme-dark {
   --background-modifier-border:       {{ .dark.bg4 }};
   --background-modifier-border-focus: {{ .dark.bg5 }};
   --background-modifier-border-hover: {{ .dark.bg5 }};
-  --background-modifier-error:        rgba({{ hex2rgb .dark.rose }}, 0.15);
-  --background-modifier-error-hover:  rgba({{ hex2rgb .dark.rose }}, 0.25);
+  --background-modifier-error:        rgba({{ hex2rgb .dark.ember }}, 0.15);
+  --background-modifier-error-hover:  rgba({{ hex2rgb .dark.ember }}, 0.25);
   --background-modifier-success:      rgba({{ hex2rgb .dark.moss }}, 0.15);
   --background-modifier-message:      rgba({{ hex2rgb .dark.bg }}, 0.9);
   --background-modifier-form-field:   rgba(0,0,0,0.15);
@@ -29,23 +29,23 @@ body.theme-dark {
   --font-interface:  -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   --font-monospace:  ui-monospace, "SF Mono", Menlo, monospace;
   --font-text-size:  15px;
-  --line-height-normal: 1.75;
+  --line-height-normal: 1.4;
   --file-line-width: 680px;
 
-  --h1-size: 1.467em;  --h1-weight: 600;  --h1-line-height: 1.3;
-  --h2-size: 1.2em;    --h2-weight: 600;  --h2-line-height: 1.4;
-  --h3-size: 1em;      --h3-weight: 600;  --h3-line-height: 1.5;
-  --h4-size: 0.933em;  --h4-weight: 600;
-  --h5-size: 0.867em;  --h5-weight: 600;
-  --h6-size: 0.867em;  --h6-weight: 600;
+  --h1-size: 22px;  --h1-weight: 600;  --h1-line-height: 1.3;
+  --h2-size: 19px;  --h2-weight: 600;  --h2-line-height: 1.4;
+  --h3-size: 16px;  --h3-weight: 600;  --h3-line-height: 1.4;
+  --h4-size: 14px;  --h4-weight: 600;
+  --h5-size: 13px;  --h5-weight: 600;
+  --h6-size: 13px;  --h6-weight: 600;
 
   /* Text */
-  --text-normal:             {{ .dark.tx2 }};
+  --text-normal:             {{ .dark.tx4 }};
   --text-muted:              {{ .dark.tx3 }};
   --text-faint:              {{ .dark.tx4 }};
   --text-on-accent:          {{ .dark.bg }};
   --text-on-accent-inverted: {{ .dark.tx }};
-  --text-error:              {{ .dark.rose }};
+  --text-error:              {{ .dark.ember }};
   --text-warning:            {{ .dark.amber }};
   --text-success:            {{ .dark.moss }};
   --text-accent:             {{ .dark.amber }};
@@ -99,32 +99,45 @@ body.theme-dark {
   --indentation-guide-color:        {{ .dark.bg4 }};
   --indentation-guide-color-active: {{ .dark.tx5 }};
 
+  /* Accent palette - for use in global CSS rules */
+  --flynt-tx:    {{ .dark.tx }};
+  --flynt-tx2:   {{ .dark.tx2 }};
+  --flynt-tx5:   {{ .dark.tx5 }};
+  --flynt-amber: {{ .dark.amber }};
+  --flynt-delft: {{ .dark.delft }};
+  --flynt-teal:  {{ .dark.teal }};
+  --flynt-moss:  {{ .dark.moss }};
+  --flynt-rose:  {{ .dark.rose }};
+
   /* Headings */
   --h1-color: {{ .dark.tx }};
   --h2-color: {{ .dark.tx2 }};
-  --h3-color: {{ .dark.amber }};
-  --h4-color: {{ .dark.tx3 }};
-  --h5-color: {{ .dark.tx3 }};
-  --h6-color: {{ .dark.tx4 }};
+  --h3-color: {{ .dark.tx3 }};
+  --h4-color: {{ .dark.tx4 }};
+  --h5-color: {{ .dark.tx5 }};
+  --h6-color: {{ .dark.tx5 }};
 
   /* Links */
   --link-color:                {{ .dark.amber }};
   --link-color-hover:          {{ shade .dark.shades "amber" "400" }};
-  --link-external-color:       {{ .dark.delft }};
-  --link-external-color-hover: {{ shade .dark.shades "delft" "400" }};
-  --link-unresolved-color:     {{ .dark.amber }};
-  --link-unresolved-opacity:   0.5;
+  --link-external-color:       {{ .dark.teal }};
+  --link-external-color-hover: {{ shade .dark.shades "teal" "400" }};
+  --link-unresolved-color:     {{ .dark.clay }};
+  --link-unresolved-opacity:   0.8;
 
   /* Inline formatting */
   --bold-color:          {{ .dark.tx }};
-  --italic-color:        {{ .dark.tx3 }};
+  --italic-color:        {{ .dark.tx2 }};
   --bold-italic-color:   {{ .dark.tx }};
   --strikethrough-color: {{ .dark.tx4 }};
+
+  /* List markers */
+  --list-marker-color: {{ .dark.amber }};
 
   /* Blockquote */
   --blockquote-border-thickness: 2px;
   --blockquote-border-color:     {{ .dark.amber }};
-  --blockquote-color:            {{ .dark.tx3 }};
+  --blockquote-color:            {{ .dark.tx5 }};
   --blockquote-background-color: rgba({{ hex2rgb .dark.amber }}, 0.05);
 
   /* Horizontal rule */
@@ -184,7 +197,7 @@ body.theme-dark {
   --code-value:       {{ .dark.teal }};
 }
 
-/* Callouts — dark */
+/* Callouts - dark */
 body.theme-dark .callout[data-callout="note"],
 body.theme-dark .callout[data-callout="info"] { --callout-color: {{ hex2rgb .dark.delft }}; }
 body.theme-dark .callout[data-callout="abstract"],
@@ -225,8 +238,8 @@ body.theme-light {
   --background-modifier-border:       {{ .light.bg4 }};
   --background-modifier-border-focus: {{ .light.bg5 }};
   --background-modifier-border-hover: {{ .light.bg5 }};
-  --background-modifier-error:        rgba({{ hex2rgb .light.rose }}, 0.12);
-  --background-modifier-error-hover:  rgba({{ hex2rgb .light.rose }}, 0.2);
+  --background-modifier-error:        rgba({{ hex2rgb .light.ember }}, 0.12);
+  --background-modifier-error-hover:  rgba({{ hex2rgb .light.ember }}, 0.2);
   --background-modifier-success:      rgba({{ hex2rgb .light.moss }}, 0.12);
   --background-modifier-message:      rgba({{ hex2rgb .light.bg2 }}, 0.95);
   --background-modifier-form-field:   rgba(0,0,0,0.04);
@@ -236,23 +249,23 @@ body.theme-light {
   --font-interface:  -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   --font-monospace:  ui-monospace, "SF Mono", Menlo, monospace;
   --font-text-size:  15px;
-  --line-height-normal: 1.75;
+  --line-height-normal: 1.4;
   --file-line-width: 680px;
 
-  --h1-size: 1.467em;  --h1-weight: 600;  --h1-line-height: 1.3;
-  --h2-size: 1.2em;    --h2-weight: 600;  --h2-line-height: 1.4;
-  --h3-size: 1em;      --h3-weight: 600;  --h3-line-height: 1.5;
-  --h4-size: 0.933em;  --h4-weight: 600;
-  --h5-size: 0.867em;  --h5-weight: 600;
-  --h6-size: 0.867em;  --h6-weight: 600;
+  --h1-size: 22px;  --h1-weight: 600;  --h1-line-height: 1.3;
+  --h2-size: 19px;  --h2-weight: 600;  --h2-line-height: 1.4;
+  --h3-size: 16px;  --h3-weight: 600;  --h3-line-height: 1.4;
+  --h4-size: 14px;  --h4-weight: 600;
+  --h5-size: 13px;  --h5-weight: 600;
+  --h6-size: 13px;  --h6-weight: 600;
 
   /* Text */
-  --text-normal:             {{ .light.tx2 }};
+  --text-normal:             {{ .light.tx4 }};
   --text-muted:              {{ .light.tx3 }};
   --text-faint:              {{ .light.tx4 }};
   --text-on-accent:          {{ .light.bg }};
   --text-on-accent-inverted: {{ .light.tx }};
-  --text-error:              {{ .light.rose }};
+  --text-error:              {{ .light.ember }};
   --text-warning:            {{ .light.amber }};
   --text-success:            {{ .light.moss }};
   --text-accent:             {{ .light.amber }};
@@ -306,32 +319,45 @@ body.theme-light {
   --indentation-guide-color:        {{ .light.bg4 }};
   --indentation-guide-color-active: {{ .light.tx5 }};
 
+  /* Accent palette - for use in global CSS rules */
+  --flynt-tx:    {{ .light.tx }};
+  --flynt-tx2:   {{ .light.tx2 }};
+  --flynt-tx5:   {{ .light.tx5 }};
+  --flynt-amber: {{ .light.amber }};
+  --flynt-delft: {{ .light.delft }};
+  --flynt-teal:  {{ .light.teal }};
+  --flynt-moss:  {{ .light.moss }};
+  --flynt-rose:  {{ .light.rose }};
+
   /* Headings */
   --h1-color: {{ .light.tx }};
   --h2-color: {{ .light.tx2 }};
-  --h3-color: {{ .light.amber }};
-  --h4-color: {{ .light.tx3 }};
-  --h5-color: {{ .light.tx3 }};
-  --h6-color: {{ .light.tx4 }};
+  --h3-color: {{ .light.tx3 }};
+  --h4-color: {{ .light.tx4 }};
+  --h5-color: {{ .light.tx5 }};
+  --h6-color: {{ .light.tx5 }};
 
   /* Links */
   --link-color:                {{ .light.amber }};
   --link-color-hover:          {{ shade .light.shades "amber" "600" }};
-  --link-external-color:       {{ .light.delft }};
-  --link-external-color-hover: {{ shade .light.shades "delft" "600" }};
-  --link-unresolved-color:     {{ .light.amber }};
-  --link-unresolved-opacity:   0.5;
+  --link-external-color:       {{ .light.teal }};
+  --link-external-color-hover: {{ shade .light.shades "teal" "600" }};
+  --link-unresolved-color:     {{ .light.clay }};
+  --link-unresolved-opacity:   0.8;
 
   /* Inline formatting */
   --bold-color:          {{ .light.tx }};
-  --italic-color:        {{ .light.tx3 }};
+  --italic-color:        {{ .light.tx2 }};
   --bold-italic-color:   {{ .light.tx }};
   --strikethrough-color: {{ .light.tx4 }};
+
+  /* List markers */
+  --list-marker-color: {{ .light.amber }};
 
   /* Blockquote */
   --blockquote-border-thickness: 2px;
   --blockquote-border-color:     {{ .light.amber }};
-  --blockquote-color:            {{ .light.tx3 }};
+  --blockquote-color:            {{ .light.tx5 }};
   --blockquote-background-color: rgba({{ hex2rgb .light.amber }}, 0.05);
 
   /* Horizontal rule */
@@ -391,7 +417,7 @@ body.theme-light {
   --code-value:       {{ .light.teal }};
 }
 
-/* Callouts — light */
+/* Callouts - light */
 body.theme-light .callout[data-callout="note"],
 body.theme-light .callout[data-callout="info"] { --callout-color: {{ hex2rgb .light.delft }}; }
 body.theme-light .callout[data-callout="abstract"],
@@ -420,7 +446,7 @@ body.theme-light .callout[data-callout="cite"] { --callout-color: {{ hex2rgb .li
 
 /* ══════════════════════════════════════════════════════════ Global rules */
 
-/* No uppercase or wide letter-spacing on any heading */
+/* Obsidian uppercases some interface headings by default; reset for document content */
 h1, h2, h3, h4, h5, h6,
 .markdown-rendered h1,
 .markdown-rendered h2,
@@ -428,40 +454,72 @@ h1, h2, h3, h4, h5, h6,
 .markdown-rendered h4,
 .markdown-rendered h5,
 .markdown-rendered h6,
-.HyperMD-header {
-  text-transform: none;
-  letter-spacing: normal;
-}
+.HyperMD-header { text-transform: none; }
 
-/* Inline title (file name shown above content) */
+/* ── Inline title */
 .inline-title {
-  font-size: 1.8em;
-  font-weight: 700;
-  color: var(--text-normal);
+  font-size: var(--h1-size);
+  font-weight: var(--h1-weight);
+  color: var(--h1-color);
   letter-spacing: -0.01em;
 }
 
-/* Reading view content */
+/* ── Body text */
 .markdown-rendered {
-  line-height: 1.75;
+  line-height: var(--line-height-normal);
+  color: var(--text-normal);
 }
 
-.markdown-rendered p {
-  color: var(--text-muted);
+/* ── Headings: shared font weight */
+h1, h2, h3, h4, h5, h6,
+.cm-s-obsidian .cm-header { font-weight: 600; }
+
+/* ── Headings: reading view */
+.markdown-rendered h1 { font-size: var(--h1-size); color: var(--h1-color); letter-spacing: -0.01em; margin-bottom: 8px; }
+.markdown-rendered h2 { font-size: var(--h2-size); color: var(--h2-color); margin-top: 20px; margin-bottom: 8px; border-bottom: 1px solid var(--background-secondary-alt); padding-bottom: 8px; }
+.markdown-rendered h3 { font-size: var(--h3-size); color: var(--h3-color); margin-top: 20px; margin-bottom: 8px; border-bottom: 1px solid var(--background-secondary-alt); padding-bottom: 8px; }
+.markdown-rendered h4 { font-size: var(--h4-size); color: var(--h4-color); margin-top: 20px; margin-bottom: 8px; border-bottom: 1px solid var(--background-secondary-alt); padding-bottom: 8px; }
+.markdown-rendered h5 { font-size: var(--h5-size); color: var(--h5-color); margin-top: 20px; margin-bottom: 8px; border-bottom: 1px solid var(--background-secondary-alt); padding-bottom: 8px; }
+.markdown-rendered h6 { font-size: var(--h6-size); color: var(--h6-color); margin-top: 20px; margin-bottom: 8px; }
+
+/* ── Headings: editor */
+.cm-s-obsidian .cm-header-1 { font-size: var(--h1-size); color: var(--h1-color); letter-spacing: -0.01em; }
+.cm-s-obsidian .cm-header-2 { font-size: var(--h2-size); color: var(--h2-color); }
+.cm-s-obsidian .cm-header-3 { font-size: var(--h3-size); color: var(--h3-color); }
+.cm-s-obsidian .cm-header-4 { font-size: var(--h4-size); color: var(--h4-color); }
+.cm-s-obsidian .cm-header-5,
+.cm-s-obsidian .cm-header-6 { font-size: var(--h5-size); color: var(--h5-color); }
+
+/* ── Headings: editor spacing + underline
+   Border goes on .HyperMD-header-* (the .cm-line block), NOT .cm-header-* (the text span).
+   Putting border-bottom on the span splits the heading across two visual lines in the editor. */
+.HyperMD-header-1 { padding-top: 20px; }
+.HyperMD-header-2,
+.HyperMD-header-3,
+.HyperMD-header-4,
+.HyperMD-header-5 {
+  border-bottom: 1px solid var(--background-secondary-alt);
+  padding-top: 20px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
-/* Inline code */
+/* ── Inline code */
 .markdown-rendered code,
-.cm-inline-code {
+.cm-inline-code,
+.cm-s-obsidian .cm-inline-code,
+.cm-editor .cm-line .cm-inline-code {
   font-family: var(--font-monospace);
   font-size: 12px;
   background: var(--background-secondary-alt);
-  color: var(--text-muted);
-  padding: 1px 5px;
+  color: var(--flynt-moss) !important; /* !important wins specificity over Obsidian's default code color */
+  padding: 2px 5px;
   border-radius: 3px;
+  vertical-align: middle;
+  line-height: 1; /* prevents inline code from inflating surrounding line height */
 }
 
-/* Code block */
+/* ── Code blocks */
 .markdown-rendered pre {
   background: var(--background-secondary);
   border: 1px solid var(--background-modifier-border);
@@ -477,37 +535,121 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.6;
 }
 
-/* Blockquote */
+/* No language specified → moss */
+.markdown-rendered pre:not([class*="language-"]) code { color: var(--flynt-moss); }
+
+/* Language specified → syntax highlighting via --code-* vars */
+.markdown-rendered pre[class*="language-"] code { color: var(--code-normal); }
+
+/* ── List markers (all depths) */
+.markdown-rendered ul li::marker,
+.markdown-rendered ol li::marker,
+.cm-formatting-list { color: var(--list-marker-color); }
+
+/* ── Task checkboxes: base alignment */
+.task-list-item-checkbox { vertical-align: middle; position: relative; top: 2px !important; } /* top offset fine-tunes optical alignment; !important beats Obsidian's own positioning */
+
+/* [x] done - amber checkmark */
+input[data-task='x']:checked,
+li[data-task='x'] > input:checked,
+li[data-task='x'] > p > input:checked {
+  color: var(--flynt-amber);
+  --checkbox-marker-color: transparent;
+  border: none; border-radius: 0;
+  background-image: none;
+  background-color: currentColor;
+  -webkit-mask-size: var(--checkbox-icon);
+  -webkit-mask-position: 50% 50%;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+li[data-task='x'], li[data-task='X'] { color: var(--text-faint); }
+
+/* [/] in progress - half-filled amber */
+input[data-task='/']:checked,
+li[data-task='/'] > input:checked,
+li[data-task='/'] > p > input:checked {
+  background-image: none; background-color: transparent;
+  border-color: var(--flynt-amber);
+  position: relative; overflow: hidden;
+}
+input[data-task='/']:checked::after,
+li[data-task='/'] > input:checked::after,
+li[data-task='/'] > p > input:checked::after {
+  content: ' '; display: block; position: absolute;
+  top: 0; left: 0;
+  background-color: var(--flynt-amber);
+  width: 50%; height: 100%;
+}
+
+/* [-] cancelled - X icon, strikethrough */
+input[data-task='-']:checked,
+li[data-task='-'] > input:checked,
+li[data-task='-'] > p > input:checked {
+  color: var(--flynt-tx5);
+  --checkbox-marker-color: transparent;
+  border: none; border-radius: 0;
+  background-image: none;
+  background-color: currentColor;
+  -webkit-mask-size: var(--checkbox-icon);
+  -webkit-mask-position: 50% 50%;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+li[data-task='-'] { color: var(--flynt-tx5); text-decoration: line-through; }
+
+/* [!] important - warning icon, rose */
+input[data-task='!']:checked,
+li[data-task='!'] > input:checked,
+li[data-task='!'] > p > input:checked {
+  color: var(--flynt-rose);
+  --checkbox-marker-color: transparent;
+  border: none; border-radius: 0;
+  background-image: none;
+  background-color: currentColor;
+  -webkit-mask-size: var(--checkbox-icon);
+  -webkit-mask-position: 50% 50%;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* [?] question - teal */
+input[data-task='?']:checked,
+li[data-task='?'] > input:checked,
+li[data-task='?'] > p > input:checked {
+  color: var(--flynt-teal);
+  --checkbox-marker-color: transparent;
+  border: none; border-radius: 0;
+  background-image: none;
+  background-color: currentColor;
+  -webkit-mask-size: var(--checkbox-icon);
+  -webkit-mask-position: 50% 50%;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='currentColor' fill-rule='evenodd' d='M4.475 5.458c-.284 0-.514-.237-.47-.517C4.28 3.24 5.576 2 7.825 2c2.25 0 3.767 1.36 3.767 3.215c0 1.344-.665 2.288-1.79 2.973c-1.1.659-1.414 1.118-1.414 2.01v.03a.5.5 0 0 1-.5.5h-.77a.5.5 0 0 1-.5-.495l-.003-.2c-.043-1.221.477-2.001 1.645-2.712c1.03-.632 1.397-1.135 1.397-2.028c0-.979-.758-1.698-1.926-1.698c-1.009 0-1.71.529-1.938 1.402c-.066.254-.278.461-.54.461h-.777ZM7.496 14c.622 0 1.095-.474 1.095-1.09c0-.618-.473-1.092-1.095-1.092c-.606 0-1.087.474-1.087 1.091S6.89 14 7.496 14Z'/%3E%3C/svg%3E");
+}
+
+/* ── Blockquote */
 .markdown-rendered blockquote {
   border-left: 2px solid var(--blockquote-border-color);
   background: var(--blockquote-background-color);
   color: var(--blockquote-color);
+  font-style: italic;
   margin: 1em 0;
   padding: 10px 16px;
   border-radius: 0 4px 4px 0;
 }
 
-/* Horizontal rule */
+/* ── Horizontal rule */
 .markdown-rendered hr {
   border: none;
   border-top: 1px solid var(--hr-color);
   margin: 32px 0;
 }
 
-/* Bold keeps full contrast */
+/* ── Inline formatting */
 .markdown-rendered strong { color: var(--bold-color); }
+.markdown-rendered em     { color: var(--italic-color); }
+.markdown-rendered del    { color: var(--strikethrough-color); }
 
-/* Italic is muted */
-.markdown-rendered em { color: var(--italic-color); }
+/* ── Tables */
+.markdown-rendered table { width: 100%; border-collapse: collapse; }
 
-/* Strikethrough */
-.markdown-rendered del { color: var(--strikethrough-color); }
-
-/* Tables */
-.markdown-rendered table {
-  width: 100%;
-  border-collapse: collapse;
-}
 .markdown-rendered th {
   font-size: 11px;
   font-weight: 600;
@@ -518,6 +660,7 @@ h1, h2, h3, h4, h5, h6,
   padding: 0 16px 8px 0;
   border-bottom: 1px solid var(--table-border-color);
 }
+
 .markdown-rendered td {
   padding: 8px 16px 8px 0;
   border-bottom: 1px solid var(--background-modifier-border);
@@ -525,8 +668,29 @@ h1, h2, h3, h4, h5, h6,
   color: var(--text-normal);
 }
 
-/* Tags */
-.tag {
-  font-size: 12px;
-  font-weight: 500;
+/* ── Properties */
+.metadata-container {
+  background: var(--background-primary-alt);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 24px;
 }
+
+.metadata-property-key   { color: var(--text-faint); font-size: 12px; }
+.metadata-property-value { color: var(--text-muted); font-size: 12px; }
+
+/* ── Footnotes */
+.markdown-rendered .footnotes,
+.markdown-rendered .footnote-ref,
+.markdown-rendered .footnote-backref,
+.cm-footref,
+.HyperMD-footnote,
+.cm-hmd-footnote { color: var(--flynt-tx5); font-size: 12px; }
+
+/* ── Tags */
+.tag { font-size: 12px; font-weight: 500; }
+
+/* ── Math */
+.math, .math-inline, .math-block, mjx-container,
+.cm-math, .hmd-fold-math-placeholder { color: var(--flynt-tx2); }
