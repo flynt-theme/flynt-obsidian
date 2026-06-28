@@ -1,0 +1,389 @@
+---
+output: theme.css
+---
+/* Flynt — Warm tones. Zero visual noise. */
+/* https://github.com/flynt-theme/flynt-obsidian */
+
+/* ══════════════════════════════════════════════════════════ Dark */
+body.theme-dark {
+  color-scheme: dark;
+
+  /* Backgrounds */
+  --background-primary:               {{ .dark.bg }};
+  --background-primary-alt:           {{ .dark.bg2 }};
+  --background-secondary:             {{ .dark.bg2 }};
+  --background-secondary-alt:         {{ .dark.bg3 }};
+  --background-modifier-hover:        rgba({{ hex2rgb .dark.tx }}, 0.04);
+  --background-modifier-active-hover: rgba({{ hex2rgb .dark.tx }}, 0.06);
+  --background-modifier-border:       {{ .dark.bg4 }};
+  --background-modifier-border-focus: {{ .dark.bg5 }};
+  --background-modifier-border-hover: {{ .dark.bg5 }};
+  --background-modifier-error:        rgba({{ hex2rgb .dark.rose }}, 0.15);
+  --background-modifier-error-hover:  rgba({{ hex2rgb .dark.rose }}, 0.25);
+  --background-modifier-success:      rgba({{ hex2rgb .dark.moss }}, 0.15);
+  --background-modifier-message:      rgba({{ hex2rgb .dark.bg }}, 0.9);
+  --background-modifier-form-field:   rgba(0,0,0,0.15);
+
+  /* Text */
+  --text-normal:             {{ .dark.tx }};
+  --text-muted:              {{ .dark.tx3 }};
+  --text-faint:              {{ .dark.tx4 }};
+  --text-on-accent:          {{ .dark.bg }};
+  --text-on-accent-inverted: {{ .dark.tx }};
+  --text-error:              {{ .dark.rose }};
+  --text-warning:            {{ .dark.amber }};
+  --text-success:            {{ .dark.moss }};
+  --text-accent:             {{ .dark.amber }};
+  --text-accent-hover:       {{ shade .dark.shades "amber" "400" }};
+  --text-highlight-bg:       rgba({{ hex2rgb .dark.amber }}, 0.2);
+  --text-selection:          rgba({{ hex2rgb .dark.amber }}, 0.15);
+
+  /* Interactive */
+  --interactive-normal:       {{ .dark.bg2 }};
+  --interactive-hover:        {{ .dark.bg3 }};
+  --interactive-accent:       {{ .dark.amber }};
+  --interactive-accent-hover: {{ shade .dark.shades "amber" "400" }};
+  --interactive-success:      {{ .dark.moss }};
+
+  /* Accent */
+  --color-accent:   {{ .dark.amber }};
+  --color-accent-1: {{ .dark.amber }};
+  --color-accent-2: {{ shade .dark.shades "amber" "400" }};
+
+  /* Scrollbars */
+  --scrollbar-bg:              transparent;
+  --scrollbar-thumb-bg:        rgba({{ hex2rgb .dark.tx }}, 0.08);
+  --scrollbar-active-thumb-bg: rgba({{ hex2rgb .dark.tx }}, 0.15);
+
+  /* Window chrome */
+  --titlebar-background:         {{ .dark.bg2 }};
+  --titlebar-background-focused: {{ .dark.bg3 }};
+  --ribbon-background:           {{ .dark.bg2 }};
+  --ribbon-background-collapsed: {{ .dark.bg2 }};
+  --statusbar-background:        {{ .dark.bg3 }};
+
+  /* Tabs */
+  --tab-background-active:         {{ .dark.bg }};
+  --tab-text-color:                {{ .dark.tx4 }};
+  --tab-text-color-focused:        {{ .dark.tx3 }};
+  --tab-text-color-focused-active: {{ .dark.tx }};
+  --tab-text-color-active:         {{ .dark.tx3 }};
+  --tab-outline-color:             {{ .dark.bg4 }};
+
+  /* Sidebar / nav */
+  --nav-item-color:              {{ .dark.tx3 }};
+  --nav-item-color-hover:        {{ .dark.tx2 }};
+  --nav-item-color-active:       {{ .dark.tx }};
+  --nav-item-color-selected:     {{ .dark.tx }};
+  --nav-item-color-highlighted:  {{ .dark.amber }};
+  --nav-item-background-hover:   rgba({{ hex2rgb .dark.tx }}, 0.04);
+  --nav-item-background-active:  rgba({{ hex2rgb .dark.tx }}, 0.06);
+  --nav-item-background-selected: rgba({{ hex2rgb .dark.tx }}, 0.06);
+
+  /* Indentation guides */
+  --indentation-guide-color:        {{ .dark.bg4 }};
+  --indentation-guide-color-active: {{ .dark.tx5 }};
+
+  /* Headings */
+  --h1-color: {{ .dark.tx }};
+  --h2-color: {{ .dark.tx2 }};
+  --h3-color: {{ .dark.amber }};
+  --h4-color: {{ .dark.tx3 }};
+  --h5-color: {{ .dark.tx3 }};
+  --h6-color: {{ .dark.tx4 }};
+
+  /* Links */
+  --link-color:                {{ .dark.amber }};
+  --link-color-hover:          {{ shade .dark.shades "amber" "400" }};
+  --link-external-color:       {{ .dark.delft }};
+  --link-external-color-hover: {{ shade .dark.shades "delft" "400" }};
+  --link-unresolved-color:     {{ .dark.amber }};
+  --link-unresolved-opacity:   0.5;
+
+  /* Inline formatting */
+  --bold-color:          {{ .dark.tx }};
+  --italic-color:        {{ .dark.tx3 }};
+  --bold-italic-color:   {{ .dark.tx }};
+  --strikethrough-color: {{ .dark.tx4 }};
+
+  /* Blockquote */
+  --blockquote-border-thickness: 2px;
+  --blockquote-border-color:     {{ .dark.amber }};
+  --blockquote-color:            {{ .dark.tx3 }};
+  --blockquote-background-color: rgba({{ hex2rgb .dark.amber }}, 0.05);
+
+  /* Horizontal rule */
+  --hr-color: {{ .dark.bg4 }};
+
+  /* Tables */
+  --table-border-color:            {{ .dark.bg3 }};
+  --table-header-background:       {{ .dark.bg2 }};
+  --table-header-background-hover: {{ .dark.bg3 }};
+
+  /* Checklist */
+  --checklist-done-color:      {{ .dark.tx4 }};
+  --checklist-done-decoration: line-through;
+
+  /* Tags */
+  --tag-color:              {{ .dark.amber }};
+  --tag-background:         rgba({{ hex2rgb .dark.amber }}, 0.1);
+  --tag-border-color:       rgba({{ hex2rgb .dark.amber }}, 0.3);
+  --tag-color-hover:        {{ shade .dark.shades "amber" "400" }};
+  --tag-background-hover:   rgba({{ hex2rgb .dark.amber }}, 0.15);
+  --tag-border-color-hover: rgba({{ hex2rgb .dark.amber }}, 0.5);
+  --tag-border-width:       1px;
+  --tag-padding-x:          0.5em;
+  --tag-padding-y:          0.1em;
+  --tag-radius:             4px;
+
+  /* Graph */
+  --graph-node:            {{ .dark.tx4 }};
+  --graph-node-tag:        {{ .dark.amber }};
+  --graph-node-attachment: {{ .dark.delft }};
+  --graph-node-unresolved: {{ .dark.tx5 }};
+  --graph-node-focused:    {{ .dark.tx2 }};
+  --graph-line:            {{ .dark.bg4 }};
+  --graph-text:            {{ .dark.tx4 }};
+
+  /* Canvas */
+  --canvas-background: {{ .dark.bg }};
+  --canvas-color:      {{ .dark.tx4 }};
+  --canvas-dot-pattern: {{ .dark.bg3 }};
+
+  /* Modal / prompt */
+  --modal-background:  {{ .dark.bg2 }};
+  --prompt-background: {{ .dark.bg2 }};
+
+  /* Code */
+  --code-background:  {{ .dark.bg2 }};
+  --code-normal:      {{ .dark.tx }};
+  --code-comment:     {{ .dark.tx5 }};
+  --code-function:    {{ .dark.amber }};
+  --code-important:   {{ .dark.clay }};
+  --code-keyword:     {{ .dark.tx4 }};
+  --code-operator:    {{ .dark.rose }};
+  --code-property:    {{ .dark.tx3 }};
+  --code-punctuation: {{ .dark.tx }};
+  --code-string:      {{ .dark.delft }};
+  --code-tag:         {{ .dark.moss }};
+  --code-value:       {{ .dark.teal }};
+}
+
+/* Callouts — dark */
+body.theme-dark .callout[data-callout="note"],
+body.theme-dark .callout[data-callout="info"] { --callout-color: {{ hex2rgb .dark.delft }}; }
+body.theme-dark .callout[data-callout="abstract"],
+body.theme-dark .callout[data-callout="summary"],
+body.theme-dark .callout[data-callout="tldr"] { --callout-color: {{ hex2rgb .dark.teal }}; }
+body.theme-dark .callout[data-callout="tip"],
+body.theme-dark .callout[data-callout="hint"] { --callout-color: {{ hex2rgb .dark.fern }}; }
+body.theme-dark .callout[data-callout="success"],
+body.theme-dark .callout[data-callout="check"],
+body.theme-dark .callout[data-callout="done"] { --callout-color: {{ hex2rgb .dark.moss }}; }
+body.theme-dark .callout[data-callout="question"],
+body.theme-dark .callout[data-callout="help"],
+body.theme-dark .callout[data-callout="faq"] { --callout-color: {{ hex2rgb .dark.amber }}; }
+body.theme-dark .callout[data-callout="warning"],
+body.theme-dark .callout[data-callout="caution"],
+body.theme-dark .callout[data-callout="attention"] { --callout-color: {{ hex2rgb .dark.clay }}; }
+body.theme-dark .callout[data-callout="failure"],
+body.theme-dark .callout[data-callout="fail"],
+body.theme-dark .callout[data-callout="missing"] { --callout-color: {{ hex2rgb .dark.ember }}; }
+body.theme-dark .callout[data-callout="danger"],
+body.theme-dark .callout[data-callout="error"] { --callout-color: {{ hex2rgb .dark.rose }}; }
+body.theme-dark .callout[data-callout="bug"] { --callout-color: {{ hex2rgb .dark.ember }}; }
+body.theme-dark .callout[data-callout="example"] { --callout-color: {{ hex2rgb .dark.plum }}; }
+body.theme-dark .callout[data-callout="quote"],
+body.theme-dark .callout[data-callout="cite"] { --callout-color: {{ hex2rgb .dark.tx4 }}; }
+
+/* ══════════════════════════════════════════════════════════ Light */
+body.theme-light {
+  color-scheme: light;
+
+  /* Backgrounds */
+  --background-primary:               {{ .light.bg }};
+  --background-primary-alt:           {{ .light.bg2 }};
+  --background-secondary:             {{ .light.bg2 }};
+  --background-secondary-alt:         {{ .light.bg3 }};
+  --background-modifier-hover:        rgba({{ hex2rgb .light.tx }}, 0.04);
+  --background-modifier-active-hover: rgba({{ hex2rgb .light.tx }}, 0.06);
+  --background-modifier-border:       {{ .light.bg4 }};
+  --background-modifier-border-focus: {{ .light.bg5 }};
+  --background-modifier-border-hover: {{ .light.bg5 }};
+  --background-modifier-error:        rgba({{ hex2rgb .light.rose }}, 0.12);
+  --background-modifier-error-hover:  rgba({{ hex2rgb .light.rose }}, 0.2);
+  --background-modifier-success:      rgba({{ hex2rgb .light.moss }}, 0.12);
+  --background-modifier-message:      rgba({{ hex2rgb .light.bg2 }}, 0.95);
+  --background-modifier-form-field:   rgba(0,0,0,0.04);
+
+  /* Text */
+  --text-normal:             {{ .light.tx }};
+  --text-muted:              {{ .light.tx3 }};
+  --text-faint:              {{ .light.tx4 }};
+  --text-on-accent:          {{ .light.bg }};
+  --text-on-accent-inverted: {{ .light.tx }};
+  --text-error:              {{ .light.rose }};
+  --text-warning:            {{ .light.amber }};
+  --text-success:            {{ .light.moss }};
+  --text-accent:             {{ .light.amber }};
+  --text-accent-hover:       {{ shade .light.shades "amber" "600" }};
+  --text-highlight-bg:       rgba({{ hex2rgb .light.amber }}, 0.2);
+  --text-selection:          rgba({{ hex2rgb .light.amber }}, 0.15);
+
+  /* Interactive */
+  --interactive-normal:       {{ .light.bg2 }};
+  --interactive-hover:        {{ .light.bg3 }};
+  --interactive-accent:       {{ .light.amber }};
+  --interactive-accent-hover: {{ shade .light.shades "amber" "600" }};
+  --interactive-success:      {{ .light.moss }};
+
+  /* Accent */
+  --color-accent:   {{ .light.amber }};
+  --color-accent-1: {{ .light.amber }};
+  --color-accent-2: {{ shade .light.shades "amber" "600" }};
+
+  /* Scrollbars */
+  --scrollbar-bg:              transparent;
+  --scrollbar-thumb-bg:        rgba({{ hex2rgb .light.tx }}, 0.1);
+  --scrollbar-active-thumb-bg: rgba({{ hex2rgb .light.tx }}, 0.2);
+
+  /* Window chrome */
+  --titlebar-background:         {{ .light.bg2 }};
+  --titlebar-background-focused: {{ .light.bg3 }};
+  --ribbon-background:           {{ .light.bg2 }};
+  --ribbon-background-collapsed: {{ .light.bg2 }};
+  --statusbar-background:        {{ .light.bg3 }};
+
+  /* Tabs */
+  --tab-background-active:         {{ .light.bg }};
+  --tab-text-color:                {{ .light.tx4 }};
+  --tab-text-color-focused:        {{ .light.tx3 }};
+  --tab-text-color-focused-active: {{ .light.tx }};
+  --tab-text-color-active:         {{ .light.tx3 }};
+  --tab-outline-color:             {{ .light.bg4 }};
+
+  /* Sidebar / nav */
+  --nav-item-color:              {{ .light.tx3 }};
+  --nav-item-color-hover:        {{ .light.tx2 }};
+  --nav-item-color-active:       {{ .light.tx }};
+  --nav-item-color-selected:     {{ .light.tx }};
+  --nav-item-color-highlighted:  {{ .light.amber }};
+  --nav-item-background-hover:   rgba({{ hex2rgb .light.tx }}, 0.04);
+  --nav-item-background-active:  rgba({{ hex2rgb .light.tx }}, 0.06);
+  --nav-item-background-selected: rgba({{ hex2rgb .light.tx }}, 0.06);
+
+  /* Indentation guides */
+  --indentation-guide-color:        {{ .light.bg4 }};
+  --indentation-guide-color-active: {{ .light.tx5 }};
+
+  /* Headings */
+  --h1-color: {{ .light.tx }};
+  --h2-color: {{ .light.tx2 }};
+  --h3-color: {{ .light.amber }};
+  --h4-color: {{ .light.tx3 }};
+  --h5-color: {{ .light.tx3 }};
+  --h6-color: {{ .light.tx4 }};
+
+  /* Links */
+  --link-color:                {{ .light.amber }};
+  --link-color-hover:          {{ shade .light.shades "amber" "600" }};
+  --link-external-color:       {{ .light.delft }};
+  --link-external-color-hover: {{ shade .light.shades "delft" "600" }};
+  --link-unresolved-color:     {{ .light.amber }};
+  --link-unresolved-opacity:   0.5;
+
+  /* Inline formatting */
+  --bold-color:          {{ .light.tx }};
+  --italic-color:        {{ .light.tx3 }};
+  --bold-italic-color:   {{ .light.tx }};
+  --strikethrough-color: {{ .light.tx4 }};
+
+  /* Blockquote */
+  --blockquote-border-thickness: 2px;
+  --blockquote-border-color:     {{ .light.amber }};
+  --blockquote-color:            {{ .light.tx3 }};
+  --blockquote-background-color: rgba({{ hex2rgb .light.amber }}, 0.05);
+
+  /* Horizontal rule */
+  --hr-color: {{ .light.bg4 }};
+
+  /* Tables */
+  --table-border-color:            {{ .light.bg3 }};
+  --table-header-background:       {{ .light.bg2 }};
+  --table-header-background-hover: {{ .light.bg3 }};
+
+  /* Checklist */
+  --checklist-done-color:      {{ .light.tx4 }};
+  --checklist-done-decoration: line-through;
+
+  /* Tags */
+  --tag-color:              {{ .light.amber }};
+  --tag-background:         rgba({{ hex2rgb .light.amber }}, 0.1);
+  --tag-border-color:       rgba({{ hex2rgb .light.amber }}, 0.3);
+  --tag-color-hover:        {{ shade .light.shades "amber" "600" }};
+  --tag-background-hover:   rgba({{ hex2rgb .light.amber }}, 0.15);
+  --tag-border-color-hover: rgba({{ hex2rgb .light.amber }}, 0.5);
+  --tag-border-width:       1px;
+  --tag-padding-x:          0.5em;
+  --tag-padding-y:          0.1em;
+  --tag-radius:             4px;
+
+  /* Graph */
+  --graph-node:            {{ .light.tx4 }};
+  --graph-node-tag:        {{ .light.amber }};
+  --graph-node-attachment: {{ .light.delft }};
+  --graph-node-unresolved: {{ .light.tx5 }};
+  --graph-node-focused:    {{ .light.tx2 }};
+  --graph-line:            {{ .light.bg4 }};
+  --graph-text:            {{ .light.tx4 }};
+
+  /* Canvas */
+  --canvas-background:  {{ .light.bg }};
+  --canvas-color:       {{ .light.tx4 }};
+  --canvas-dot-pattern: {{ .light.bg3 }};
+
+  /* Modal / prompt */
+  --modal-background:  {{ .light.bg2 }};
+  --prompt-background: {{ .light.bg2 }};
+
+  /* Code */
+  --code-background:  {{ .light.bg2 }};
+  --code-normal:      {{ .light.tx }};
+  --code-comment:     {{ .light.tx5 }};
+  --code-function:    {{ .light.amber }};
+  --code-important:   {{ .light.clay }};
+  --code-keyword:     {{ .light.tx4 }};
+  --code-operator:    {{ .light.rose }};
+  --code-property:    {{ .light.tx3 }};
+  --code-punctuation: {{ .light.tx }};
+  --code-string:      {{ .light.delft }};
+  --code-tag:         {{ .light.moss }};
+  --code-value:       {{ .light.teal }};
+}
+
+/* Callouts — light */
+body.theme-light .callout[data-callout="note"],
+body.theme-light .callout[data-callout="info"] { --callout-color: {{ hex2rgb .light.delft }}; }
+body.theme-light .callout[data-callout="abstract"],
+body.theme-light .callout[data-callout="summary"],
+body.theme-light .callout[data-callout="tldr"] { --callout-color: {{ hex2rgb .light.teal }}; }
+body.theme-light .callout[data-callout="tip"],
+body.theme-light .callout[data-callout="hint"] { --callout-color: {{ hex2rgb .light.fern }}; }
+body.theme-light .callout[data-callout="success"],
+body.theme-light .callout[data-callout="check"],
+body.theme-light .callout[data-callout="done"] { --callout-color: {{ hex2rgb .light.moss }}; }
+body.theme-light .callout[data-callout="question"],
+body.theme-light .callout[data-callout="help"],
+body.theme-light .callout[data-callout="faq"] { --callout-color: {{ hex2rgb .light.amber }}; }
+body.theme-light .callout[data-callout="warning"],
+body.theme-light .callout[data-callout="caution"],
+body.theme-light .callout[data-callout="attention"] { --callout-color: {{ hex2rgb .light.clay }}; }
+body.theme-light .callout[data-callout="failure"],
+body.theme-light .callout[data-callout="fail"],
+body.theme-light .callout[data-callout="missing"] { --callout-color: {{ hex2rgb .light.ember }}; }
+body.theme-light .callout[data-callout="danger"],
+body.theme-light .callout[data-callout="error"] { --callout-color: {{ hex2rgb .light.rose }}; }
+body.theme-light .callout[data-callout="bug"] { --callout-color: {{ hex2rgb .light.ember }}; }
+body.theme-light .callout[data-callout="example"] { --callout-color: {{ hex2rgb .light.plum }}; }
+body.theme-light .callout[data-callout="quote"],
+body.theme-light .callout[data-callout="cite"] { --callout-color: {{ hex2rgb .light.tx4 }}; }

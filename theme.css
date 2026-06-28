@@ -1,0 +1,386 @@
+/* Flynt — Warm tones. Zero visual noise. */
+/* https://github.com/flynt-theme/flynt-obsidian */
+
+/* ══════════════════════════════════════════════════════════ Dark */
+body.theme-dark {
+  color-scheme: dark;
+
+  /* Backgrounds */
+  --background-primary:               #100E0C;
+  --background-primary-alt:           #1C1916;
+  --background-secondary:             #1C1916;
+  --background-secondary-alt:         #262220;
+  --background-modifier-hover:        rgba(245,237,216, 0.04);
+  --background-modifier-active-hover: rgba(245,237,216, 0.06);
+  --background-modifier-border:       #322F2B;
+  --background-modifier-border-focus: #403C38;
+  --background-modifier-border-hover: #403C38;
+  --background-modifier-error:        rgba(192,48,84, 0.15);
+  --background-modifier-error-hover:  rgba(192,48,84, 0.25);
+  --background-modifier-success:      rgba(147,174,66, 0.15);
+  --background-modifier-message:      rgba(16,14,12, 0.9);
+  --background-modifier-form-field:   rgba(0,0,0,0.15);
+
+  /* Text */
+  --text-normal:             #F5EDD8;
+  --text-muted:              #A89A88;
+  --text-faint:              #79685A;
+  --text-on-accent:          #100E0C;
+  --text-on-accent-inverted: #F5EDD8;
+  --text-error:              #C03054;
+  --text-warning:            #C69F2A;
+  --text-success:            #93AE42;
+  --text-accent:             #C69F2A;
+  --text-accent-hover:       #D5AE39;
+  --text-highlight-bg:       rgba(198,159,42, 0.2);
+  --text-selection:          rgba(198,159,42, 0.15);
+
+  /* Interactive */
+  --interactive-normal:       #1C1916;
+  --interactive-hover:        #262220;
+  --interactive-accent:       #C69F2A;
+  --interactive-accent-hover: #D5AE39;
+  --interactive-success:      #93AE42;
+
+  /* Accent */
+  --color-accent:   #C69F2A;
+  --color-accent-1: #C69F2A;
+  --color-accent-2: #D5AE39;
+
+  /* Scrollbars */
+  --scrollbar-bg:              transparent;
+  --scrollbar-thumb-bg:        rgba(245,237,216, 0.08);
+  --scrollbar-active-thumb-bg: rgba(245,237,216, 0.15);
+
+  /* Window chrome */
+  --titlebar-background:         #1C1916;
+  --titlebar-background-focused: #262220;
+  --ribbon-background:           #1C1916;
+  --ribbon-background-collapsed: #1C1916;
+  --statusbar-background:        #262220;
+
+  /* Tabs */
+  --tab-background-active:         #100E0C;
+  --tab-text-color:                #79685A;
+  --tab-text-color-focused:        #A89A88;
+  --tab-text-color-focused-active: #F5EDD8;
+  --tab-text-color-active:         #A89A88;
+  --tab-outline-color:             #322F2B;
+
+  /* Sidebar / nav */
+  --nav-item-color:              #A89A88;
+  --nav-item-color-hover:        #D8CEBC;
+  --nav-item-color-active:       #F5EDD8;
+  --nav-item-color-selected:     #F5EDD8;
+  --nav-item-color-highlighted:  #C69F2A;
+  --nav-item-background-hover:   rgba(245,237,216, 0.04);
+  --nav-item-background-active:  rgba(245,237,216, 0.06);
+  --nav-item-background-selected: rgba(245,237,216, 0.06);
+
+  /* Indentation guides */
+  --indentation-guide-color:        #322F2B;
+  --indentation-guide-color-active: #584F45;
+
+  /* Headings */
+  --h1-color: #F5EDD8;
+  --h2-color: #D8CEBC;
+  --h3-color: #C69F2A;
+  --h4-color: #A89A88;
+  --h5-color: #A89A88;
+  --h6-color: #79685A;
+
+  /* Links */
+  --link-color:                #C69F2A;
+  --link-color-hover:          #D5AE39;
+  --link-external-color:       #427BAE;
+  --link-external-color-hover: #518BBD;
+  --link-unresolved-color:     #C69F2A;
+  --link-unresolved-opacity:   0.5;
+
+  /* Inline formatting */
+  --bold-color:          #F5EDD8;
+  --italic-color:        #A89A88;
+  --bold-italic-color:   #F5EDD8;
+  --strikethrough-color: #79685A;
+
+  /* Blockquote */
+  --blockquote-border-thickness: 2px;
+  --blockquote-border-color:     #C69F2A;
+  --blockquote-color:            #A89A88;
+  --blockquote-background-color: rgba(198,159,42, 0.05);
+
+  /* Horizontal rule */
+  --hr-color: #322F2B;
+
+  /* Tables */
+  --table-border-color:            #262220;
+  --table-header-background:       #1C1916;
+  --table-header-background-hover: #262220;
+
+  /* Checklist */
+  --checklist-done-color:      #79685A;
+  --checklist-done-decoration: line-through;
+
+  /* Tags */
+  --tag-color:              #C69F2A;
+  --tag-background:         rgba(198,159,42, 0.1);
+  --tag-border-color:       rgba(198,159,42, 0.3);
+  --tag-color-hover:        #D5AE39;
+  --tag-background-hover:   rgba(198,159,42, 0.15);
+  --tag-border-color-hover: rgba(198,159,42, 0.5);
+  --tag-border-width:       1px;
+  --tag-padding-x:          0.5em;
+  --tag-padding-y:          0.1em;
+  --tag-radius:             4px;
+
+  /* Graph */
+  --graph-node:            #79685A;
+  --graph-node-tag:        #C69F2A;
+  --graph-node-attachment: #427BAE;
+  --graph-node-unresolved: #584F45;
+  --graph-node-focused:    #D8CEBC;
+  --graph-line:            #322F2B;
+  --graph-text:            #79685A;
+
+  /* Canvas */
+  --canvas-background: #100E0C;
+  --canvas-color:      #79685A;
+  --canvas-dot-pattern: #262220;
+
+  /* Modal / prompt */
+  --modal-background:  #1C1916;
+  --prompt-background: #1C1916;
+
+  /* Code */
+  --code-background:  #1C1916;
+  --code-normal:      #F5EDD8;
+  --code-comment:     #584F45;
+  --code-function:    #C69F2A;
+  --code-important:   #BA6836;
+  --code-keyword:     #79685A;
+  --code-operator:    #C03054;
+  --code-property:    #A89A88;
+  --code-punctuation: #F5EDD8;
+  --code-string:      #427BAE;
+  --code-tag:         #93AE42;
+  --code-value:       #48A8A0;
+}
+
+/* Callouts — dark */
+body.theme-dark .callout[data-callout="note"],
+body.theme-dark .callout[data-callout="info"] { --callout-color: 66,123,174; }
+body.theme-dark .callout[data-callout="abstract"],
+body.theme-dark .callout[data-callout="summary"],
+body.theme-dark .callout[data-callout="tldr"] { --callout-color: 72,168,160; }
+body.theme-dark .callout[data-callout="tip"],
+body.theme-dark .callout[data-callout="hint"] { --callout-color: 96,168,72; }
+body.theme-dark .callout[data-callout="success"],
+body.theme-dark .callout[data-callout="check"],
+body.theme-dark .callout[data-callout="done"] { --callout-color: 147,174,66; }
+body.theme-dark .callout[data-callout="question"],
+body.theme-dark .callout[data-callout="help"],
+body.theme-dark .callout[data-callout="faq"] { --callout-color: 198,159,42; }
+body.theme-dark .callout[data-callout="warning"],
+body.theme-dark .callout[data-callout="caution"],
+body.theme-dark .callout[data-callout="attention"] { --callout-color: 186,104,54; }
+body.theme-dark .callout[data-callout="failure"],
+body.theme-dark .callout[data-callout="fail"],
+body.theme-dark .callout[data-callout="missing"] { --callout-color: 198,55,42; }
+body.theme-dark .callout[data-callout="danger"],
+body.theme-dark .callout[data-callout="error"] { --callout-color: 192,48,84; }
+body.theme-dark .callout[data-callout="bug"] { --callout-color: 198,55,42; }
+body.theme-dark .callout[data-callout="example"] { --callout-color: 180,60,124; }
+body.theme-dark .callout[data-callout="quote"],
+body.theme-dark .callout[data-callout="cite"] { --callout-color: 121,104,90; }
+
+/* ══════════════════════════════════════════════════════════ Light */
+body.theme-light {
+  color-scheme: light;
+
+  /* Backgrounds */
+  --background-primary:               #FFFCEF;
+  --background-primary-alt:           #F2EDDE;
+  --background-secondary:             #F2EDDE;
+  --background-secondary-alt:         #E5DFD0;
+  --background-modifier-hover:        rgba(26,21,18, 0.04);
+  --background-modifier-active-hover: rgba(26,21,18, 0.06);
+  --background-modifier-border:       #D5CFC0;
+  --background-modifier-border-focus: #C0B9AA;
+  --background-modifier-border-hover: #C0B9AA;
+  --background-modifier-error:        rgba(192,48,84, 0.12);
+  --background-modifier-error-hover:  rgba(192,48,84, 0.2);
+  --background-modifier-success:      rgba(147,174,66, 0.12);
+  --background-modifier-message:      rgba(242,237,222, 0.95);
+  --background-modifier-form-field:   rgba(0,0,0,0.04);
+
+  /* Text */
+  --text-normal:             #1A1512;
+  --text-muted:              #6A5C4C;
+  --text-faint:              #8E806F;
+  --text-on-accent:          #FFFCEF;
+  --text-on-accent-inverted: #1A1512;
+  --text-error:              #C03054;
+  --text-warning:            #C69F2A;
+  --text-success:            #93AE42;
+  --text-accent:             #C69F2A;
+  --text-accent-hover:       #B18E25;
+  --text-highlight-bg:       rgba(198,159,42, 0.2);
+  --text-selection:          rgba(198,159,42, 0.15);
+
+  /* Interactive */
+  --interactive-normal:       #F2EDDE;
+  --interactive-hover:        #E5DFD0;
+  --interactive-accent:       #C69F2A;
+  --interactive-accent-hover: #B18E25;
+  --interactive-success:      #93AE42;
+
+  /* Accent */
+  --color-accent:   #C69F2A;
+  --color-accent-1: #C69F2A;
+  --color-accent-2: #B18E25;
+
+  /* Scrollbars */
+  --scrollbar-bg:              transparent;
+  --scrollbar-thumb-bg:        rgba(26,21,18, 0.1);
+  --scrollbar-active-thumb-bg: rgba(26,21,18, 0.2);
+
+  /* Window chrome */
+  --titlebar-background:         #F2EDDE;
+  --titlebar-background-focused: #E5DFD0;
+  --ribbon-background:           #F2EDDE;
+  --ribbon-background-collapsed: #F2EDDE;
+  --statusbar-background:        #E5DFD0;
+
+  /* Tabs */
+  --tab-background-active:         #FFFCEF;
+  --tab-text-color:                #8E806F;
+  --tab-text-color-focused:        #6A5C4C;
+  --tab-text-color-focused-active: #1A1512;
+  --tab-text-color-active:         #6A5C4C;
+  --tab-outline-color:             #D5CFC0;
+
+  /* Sidebar / nav */
+  --nav-item-color:              #6A5C4C;
+  --nav-item-color-hover:        #3D3228;
+  --nav-item-color-active:       #1A1512;
+  --nav-item-color-selected:     #1A1512;
+  --nav-item-color-highlighted:  #C69F2A;
+  --nav-item-background-hover:   rgba(26,21,18, 0.04);
+  --nav-item-background-active:  rgba(26,21,18, 0.06);
+  --nav-item-background-selected: rgba(26,21,18, 0.06);
+
+  /* Indentation guides */
+  --indentation-guide-color:        #D5CFC0;
+  --indentation-guide-color-active: #B2A899;
+
+  /* Headings */
+  --h1-color: #1A1512;
+  --h2-color: #3D3228;
+  --h3-color: #C69F2A;
+  --h4-color: #6A5C4C;
+  --h5-color: #6A5C4C;
+  --h6-color: #8E806F;
+
+  /* Links */
+  --link-color:                #C69F2A;
+  --link-color-hover:          #B18E25;
+  --link-external-color:       #427BAE;
+  --link-external-color-hover: #3B6E9B;
+  --link-unresolved-color:     #C69F2A;
+  --link-unresolved-opacity:   0.5;
+
+  /* Inline formatting */
+  --bold-color:          #1A1512;
+  --italic-color:        #6A5C4C;
+  --bold-italic-color:   #1A1512;
+  --strikethrough-color: #8E806F;
+
+  /* Blockquote */
+  --blockquote-border-thickness: 2px;
+  --blockquote-border-color:     #C69F2A;
+  --blockquote-color:            #6A5C4C;
+  --blockquote-background-color: rgba(198,159,42, 0.05);
+
+  /* Horizontal rule */
+  --hr-color: #D5CFC0;
+
+  /* Tables */
+  --table-border-color:            #E5DFD0;
+  --table-header-background:       #F2EDDE;
+  --table-header-background-hover: #E5DFD0;
+
+  /* Checklist */
+  --checklist-done-color:      #8E806F;
+  --checklist-done-decoration: line-through;
+
+  /* Tags */
+  --tag-color:              #C69F2A;
+  --tag-background:         rgba(198,159,42, 0.1);
+  --tag-border-color:       rgba(198,159,42, 0.3);
+  --tag-color-hover:        #B18E25;
+  --tag-background-hover:   rgba(198,159,42, 0.15);
+  --tag-border-color-hover: rgba(198,159,42, 0.5);
+  --tag-border-width:       1px;
+  --tag-padding-x:          0.5em;
+  --tag-padding-y:          0.1em;
+  --tag-radius:             4px;
+
+  /* Graph */
+  --graph-node:            #8E806F;
+  --graph-node-tag:        #C69F2A;
+  --graph-node-attachment: #427BAE;
+  --graph-node-unresolved: #B2A899;
+  --graph-node-focused:    #3D3228;
+  --graph-line:            #D5CFC0;
+  --graph-text:            #8E806F;
+
+  /* Canvas */
+  --canvas-background:  #FFFCEF;
+  --canvas-color:       #8E806F;
+  --canvas-dot-pattern: #E5DFD0;
+
+  /* Modal / prompt */
+  --modal-background:  #F2EDDE;
+  --prompt-background: #F2EDDE;
+
+  /* Code */
+  --code-background:  #F2EDDE;
+  --code-normal:      #1A1512;
+  --code-comment:     #B2A899;
+  --code-function:    #C69F2A;
+  --code-important:   #BA6836;
+  --code-keyword:     #8E806F;
+  --code-operator:    #C03054;
+  --code-property:    #6A5C4C;
+  --code-punctuation: #1A1512;
+  --code-string:      #427BAE;
+  --code-tag:         #93AE42;
+  --code-value:       #48A8A0;
+}
+
+/* Callouts — light */
+body.theme-light .callout[data-callout="note"],
+body.theme-light .callout[data-callout="info"] { --callout-color: 66,123,174; }
+body.theme-light .callout[data-callout="abstract"],
+body.theme-light .callout[data-callout="summary"],
+body.theme-light .callout[data-callout="tldr"] { --callout-color: 72,168,160; }
+body.theme-light .callout[data-callout="tip"],
+body.theme-light .callout[data-callout="hint"] { --callout-color: 96,168,72; }
+body.theme-light .callout[data-callout="success"],
+body.theme-light .callout[data-callout="check"],
+body.theme-light .callout[data-callout="done"] { --callout-color: 147,174,66; }
+body.theme-light .callout[data-callout="question"],
+body.theme-light .callout[data-callout="help"],
+body.theme-light .callout[data-callout="faq"] { --callout-color: 198,159,42; }
+body.theme-light .callout[data-callout="warning"],
+body.theme-light .callout[data-callout="caution"],
+body.theme-light .callout[data-callout="attention"] { --callout-color: 186,104,54; }
+body.theme-light .callout[data-callout="failure"],
+body.theme-light .callout[data-callout="fail"],
+body.theme-light .callout[data-callout="missing"] { --callout-color: 198,55,42; }
+body.theme-light .callout[data-callout="danger"],
+body.theme-light .callout[data-callout="error"] { --callout-color: 192,48,84; }
+body.theme-light .callout[data-callout="bug"] { --callout-color: 198,55,42; }
+body.theme-light .callout[data-callout="example"] { --callout-color: 180,60,124; }
+body.theme-light .callout[data-callout="quote"],
+body.theme-light .callout[data-callout="cite"] { --callout-color: 142,128,111; }
