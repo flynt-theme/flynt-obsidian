@@ -123,9 +123,9 @@ body.theme-dark {
   --link-unresolved-opacity:   0.8;
 
   /* Inline formatting */
-  --bold-color:          #F5EDD8;
-  --italic-color:        #D8CEBC;
-  --bold-italic-color:   #F5EDD8;
+  --bold-color:          #A89A88;
+  --italic-color:        #584F45;
+  --bold-italic-color:   #A89A88;
   --strikethrough-color: #79685A;
 
   /* List markers */
@@ -343,9 +343,9 @@ body.theme-light {
   --link-unresolved-opacity:   0.8;
 
   /* Inline formatting */
-  --bold-color:          #1A1512;
-  --italic-color:        #3D3228;
-  --bold-italic-color:   #1A1512;
+  --bold-color:          #6A5C4C;
+  --italic-color:        #B2A899;
+  --bold-italic-color:   #6A5C4C;
   --strikethrough-color: #8E806F;
 
   /* List markers */
