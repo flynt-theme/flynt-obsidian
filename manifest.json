@@ -2,7 +2,6 @@
   "name": "Flynt",
   "version": "0.1.0",
   "minAppVersion": "1.0.0",
-  "description": "Warm tones. Zero visual noise.",
   "author": "Flynt Theme",
-  "authorUrl": "https://github.com/flynt-theme/flynt-obsidian"
+  "authorUrl": "https://github.com/flynt-theme"
 }
