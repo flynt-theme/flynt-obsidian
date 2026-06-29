@@ -6,7 +6,7 @@ Warm tones. Zero visual noise. - [Flynt](https://flynt-theme.github.io/flynt) fo
 
 ## Install
 
-> Pending approval in the Obsidian community theme directory.
+**Settings - Appearance - Themes - Browse** - search for "Flynt" and click Install.
 
 ### Manual
 
